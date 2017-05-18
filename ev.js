@@ -1,5 +1,11 @@
 'use Strict';
 
-setInterval(function(){
-  console.log('Hello with delay:)');
+let counter=0;
+
+const interval = setInterval(function(){
+  console.log(`Called ${++counter} times`);
+  if(counter == 7)
+  {
+    clearInterval(interval);
+  }
 },3000)
